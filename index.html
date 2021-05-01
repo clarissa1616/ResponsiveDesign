@@ -15,23 +15,25 @@
 
     <div class="container">
         <div class="navbar">
-            <img src="./media/Sony-logo-news.jpg" alt="logo" class="logo">
+            <img src="./media/logo1.png" alt="logo" class="logo">
             <nav>
-                <ul>
-                    <li><a href="">Accessories</a></li>
-                    <li><a href="">Media remote</a></li>
-                    <li><a href="">Others</a></li>
+                <ul id="menuList">
                     <li><a href="">Sony</a></li>
+                    <li><a href="">Accessori</a></li>
+                    <li><a href="">Altro</a></li>
+
                 </ul>
             </nav>
-            <img src="./media/menu.jpg" alt="menu" class="menu-icon">
+            <img src="./media/menu1.png" alt="menu" class="menu-icon" onclick="togglemenu()">
         </div>
+
+        <!-- productContainer -->
 
         <div class="row">
             <div class="col-1">
-                <h2>SONY WHCH710N <br> Cuffie A padiglione chiuso </h2>
-                <h3>Collegamento: Bluetooth</h3>
-                <p> - Risposta in frequenza: 7 Hz - 20.000 Hz Noise cancelling - Microfono incorporato Impedenza: 72 ohm - Sensibilità: 94 dB</p>
+                <h2>SONY <br> WHCH710N </h2>
+                <h3>Cuffie a padiglione chiuso</h3>
+                <p> Risposta in frequenza: 7 Hz - 20.000 Hz Noise cancelling - Microfono incorporato Impedenza: 72 ohm - Sensibilità: 94 dB</p>
                 <h4>£149.99</h4>
                 <button type="button">Buy Now <i class="fas fa-angle-double-right"></i></button>
             </div>
@@ -42,14 +44,33 @@
                     <i class="fas fa-plus-circle add-icone "> Add to cart </i>
                 </div>
             </div>
-
-
-
         </div>
+
+        <!-- sociallink -->
+        <div class="social-links">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-twitter"></i>
+        </div>
+
+
     </div>
 
 
+    <script>
+        let menuList = document.getElementById("menuList");
+        menuList.style.maxHeight = "0px";
 
+        function togglemenu() {
+            if (menuList.style.maxHeight == "0px") {
+                menuList.style.maxHeight = "130px"
+
+            } else {
+                menuList.style.maxHeight = "0px"
+
+            }
+        }
+    </script>
 </body>
 
 </html>
